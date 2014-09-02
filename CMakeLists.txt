@@ -25,9 +25,4 @@ include_directories(
   ${INCLUDE_DIR}
 )
 
-# Set up testing
-find_package(CxxTest)
-if (${CXXTEST_FOUND})
-  enable_testing()
-  add_subdirectory(test)
-endif()
+add_subdirectory(test)

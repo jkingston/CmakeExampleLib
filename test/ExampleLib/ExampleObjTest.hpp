@@ -4,14 +4,27 @@
 using namespace ExampleLib;
 
 class ExampleObjTest : public CxxTest::TestSuite {
- public:
-  void testMultiplyByFactor(void) {
-    ExampleObj obj(2);
-    TS_ASSERT_EQUALS(obj.multiplyByFactor(5), 10);
+
+private:
+
+  // this is our test object
+  ExampleObj obj = ExampleObj(2);
+
+public:
+
+  void testMultiplyByPositive() {
     TS_ASSERT_EQUALS(obj.multiplyByFactor(1), 2);
+    TS_ASSERT_EQUALS(obj.multiplyByFactor(5), 10);
+  }
+
+  void testMultiplyByZero() {
     TS_ASSERT_EQUALS(obj.multiplyByFactor(0), 0);
+  }
+
+  void testMultiplyByNegative() {
     TS_ASSERT_EQUALS(obj.multiplyByFactor(-1), -2);
     TS_ASSERT_EQUALS(obj.multiplyByFactor(-5), -10);
   }
+
 };
 

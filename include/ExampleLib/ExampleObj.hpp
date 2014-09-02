@@ -12,6 +12,6 @@ class ExampleObj {
   int _factor;
 };
 
-}
+} // ExampleLib
 
 #endif // _ExampleLib_ExampleObj_hpp_GUARD
