@@ -10,6 +10,8 @@ project(${PROJECT_NAME})
 # Enable c++11
 add_definitions(--std=c++11)
 
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
 # Set source file directories
 set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
@@ -29,5 +31,7 @@ include_directories(
 link_directories(
 )
 
+# Set up testing
 include(CTest)
+include(GTest)
 add_subdirectory(test)
