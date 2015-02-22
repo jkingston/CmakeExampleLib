@@ -17,7 +17,7 @@ set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
 
 # Add library files
-add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME} STATIC
   ${INCLUDE_DIR}/ExampleLib/ExampleObj.hpp
   ${SRC_DIR}/ExampleLib/ExampleObj.cpp
 )
