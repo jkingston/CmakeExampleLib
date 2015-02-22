@@ -11,4 +11,4 @@ target_link_libraries(ExampleObjTest
   gtest
 )
 
-add_test(NAME ExampleObjTest COMMAND ExampleObjTest)
+add_test(NAME ExampleObjTest COMMAND ExampleObjTest --gtest_output=xml:testresults.xml)

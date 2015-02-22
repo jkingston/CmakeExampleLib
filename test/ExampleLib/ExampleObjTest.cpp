@@ -52,6 +52,18 @@ TEST_F(ExampleObjTest, MultiplyByNegative) {
   EXPECT_EQ(obj.multiplyByFactor(-5), -10);
 }
 
+TEST_F(ExampleObjTest, IsFactorOfZeroIsZero) {
+  EXPECT_EQ(obj.isFactor(0), true);
+}
+
+TEST_F(ExampleObjTest, IsFactorOfFactorIsTrue) {
+  EXPECT_EQ(obj.isFactor(2), true);
+}
+
+TEST_F(ExampleObjTest, IsFactorOfMultipleIsTrue) {
+  EXPECT_EQ(obj.isFactor(4), true);
+}
+
 }
 
 int main(int argc, char **argv) {

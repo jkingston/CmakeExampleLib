@@ -9,3 +9,7 @@ ExampleObj::ExampleObj(int factor) {
 int ExampleObj::multiplyByFactor(int n) {
   return n * _factor;
 }
+
+bool ExampleObj::isFactor(int n) {
+  return (n % _factor) == 0;
+}
