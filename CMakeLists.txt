@@ -25,4 +25,9 @@ include_directories(
   ${INCLUDE_DIR}
 )
 
+# Set up link directories
+link_directories(
+)
+
+include(CTest)
 add_subdirectory(test)

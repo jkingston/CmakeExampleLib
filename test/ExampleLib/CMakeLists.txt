@@ -1,6 +1,14 @@
 # Add unit tests
-CXXTEST_ADD_TEST(ExampleObjTest ExampleObjTest.cpp ${CMAKE_CURRENT_SOURCE_DIR}/ExampleObjTest.hpp)
+add_executable(ExampleObjTest ExampleObjTest.cpp)
+
+include_directories(ExampleObjTest
+  ${INCLUDE_DIR}
+  ${GTEST_INCLUDE_DIR}
+)
 
 target_link_libraries(ExampleObjTest
   ExampleLib
+  gtest
 )
+
+add_test(NAME ExampleObjTest COMMAND ExampleObjTest)
