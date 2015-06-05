@@ -6,11 +6,15 @@ using namespace ExampleLib;
 namespace {
 
 class ExampleObjTest : public ::testing::Test {
+ public:
+
+  ExampleObj obj;
+
  protected:
   // You can remove any or all of the following functions if its body
   // is empty.
 
-  ExampleObjTest() {
+  ExampleObjTest() : obj(2) {
     // You can do set-up work for each test here.
   }
 
@@ -24,18 +28,12 @@ class ExampleObjTest : public ::testing::Test {
   virtual void SetUp() {
     // Code here will be called immediately after the constructor (right
     // before each test).
-    obj = ExampleObj(2);
   }
 
   virtual void TearDown() {
     // Code here will be called immediately after each test (right
     // before the destructor).
   }
-
- public:
-
-  // this is our test object
-  ExampleObj obj = ExampleObj(2);
 };
 
 TEST_F(ExampleObjTest, MultiplyByPositive) {
